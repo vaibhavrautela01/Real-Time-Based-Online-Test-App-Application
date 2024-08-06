@@ -1,0 +1,85 @@
+.afterlogin{
+    display: flex;
+    position: relative;
+    left:10%;
+
+}
+
+.afterloginbtn{
+    background-color: rgb(216, 51, 51);
+    color: white;
+    height: 200px;
+    width: 400px;
+    border: 2px solid black;
+    margin-bottom: 50px; 
+    margin-left:5px ;
+    border-radius: 5px;   
+
+}
+.afterloginbtn:hover{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.afterloginbtn2:hover{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.afterloginbtn3:hover{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.afterloginbtn2{
+    background-color: rgb(110, 110, 230);
+    color: white;
+    height: 200px;
+    width: 400px;
+    border: 2px solid black;
+    margin-bottom: 50px; 
+    margin-left:5px ;
+    border-radius: 5px;   
+
+}
+
+
+.afterloginbtn3{
+    background-color: rgb(231, 55, 55);
+    color: white;
+    height: 200px;
+    width: 400px;
+    border: 2px solid black;
+    margin-bottom: 50px; 
+    margin-left:5px ;
+    border-radius: 5px;   
+
+}
+
+/* .afterloginbtn:hover{
+    padding-bottom:50px ;
+    padding-right:15px ;
+} */
+#Result{
+    position:relative;
+    top:5px;
+    left:15px;
+    font-size: 20px;
+    
+}
+
+.afterloginimg{
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+    border-radius: 15px; 
+    float: right;
+
+}
+
+.subb{
+    height: 50px;
+    width: 100px;
+    position: relative;
+    right: -250px;
+    top:-50px;
+    box-shadow: 1px 1px 20px blue;
+}

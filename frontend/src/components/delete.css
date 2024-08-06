@@ -1,0 +1,135 @@
+.sbmt{
+    color: white;
+    background-color: blue;
+    padding: 10px;
+}
+.sbmt:hover{
+    background-color: red;
+}
+
+
+.edit{
+    padding: 10px;
+    padding-right: 20px ;
+    padding-left: 20px;
+    color:white;
+    background-color:blue;
+}
+
+
+.edit:hover{
+    background-color: rgb(73, 73, 236);
+}
+
+
+.delete{
+    padding: 10px;
+    padding-right: 20px ;
+    padding-left: 20px;
+    color:white;
+    background-color:red;
+    margin-left: 1px;
+}
+
+
+.delete:hover{
+    background-color: rgb(203, 90, 90);
+}
+
+
+
+
+.subject{
+    width: 10%;
+    padding: 1%;
+}
+.subcode{
+    width: 10%;
+    padding: 1%;
+
+}
+.question{
+    width: 25%;
+    padding: 1%;
+
+}
+.option1{
+    width: 10%;
+    padding: 1%;
+
+}
+.option2{
+    width: 10%;
+    padding: 1%;
+
+}
+.option3{
+    width: 10%;
+    padding: 1%;
+
+}
+.option4{
+    width: 10%;
+    padding: 1%;
+}
+
+.nab2 {
+    position: absolute;
+    top: 70px; /* Adjust as needed */
+    right: 50px; /* Adjust as needed */
+    z-index: 2; /* Higher z-index to appear above the button */
+}
+
+.deleteall{
+    position:absolute;
+    right: 10px;
+    color: white;
+    background-color: red;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.deleteall:hover{
+background-color: rgb(162, 24, 24);    
+}
+
+
+
+
+
+
+
+.subject2{
+    width: 10%;
+}
+.subcode2{
+    width: 10%;
+}
+.question2{
+    width: 25%;
+
+}
+.option12{
+    width: 10%;
+    position: relative;
+    left: 30px;
+
+}
+.option22{
+    width: 10%;
+    position: relative;
+    left: 40px;
+
+}
+.option32{
+    width: 10%;
+    position: relative;
+    left: 70px;
+
+}
+.option42{
+    width: 10%;
+    position: absolute;
+    left: -130px;
+}

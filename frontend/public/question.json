@@ -1,0 +1,19 @@
+[
+  {
+    "firstname": "Vaibhav",
+    "lastname": "Rautela",
+    "admin": "Graphic Era Hill University",
+    "subject": "Maths",
+    "subcode": "Select Paper Code",
+    "section": "Select Section",
+    "question": "how old ar you?",
+    "option1": "scd",
+    "option2": "america",
+    "option3": "Bird",
+    "option4": "china",
+    "id": 103,
+    "answer": "",
+    "uniID": "1234",
+    "random": null
+  }
+]

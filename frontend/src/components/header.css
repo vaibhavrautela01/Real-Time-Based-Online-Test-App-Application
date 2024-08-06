@@ -1,0 +1,121 @@
+nav li{
+    list-style-type: none;
+    color: white;  
+    padding: 10px;
+    margin-right: 50px;
+    margin: 20px;
+    position: relative;
+    top: 0px;
+       
+}
+
+#user{
+    position: absolute;
+    right: 4%;
+    top:3.5%;
+    height: 50px;
+    width: 50px;
+}
+.nab2{
+    border: 2px solid black;
+    position: absolute;
+    right: 5%;
+    font-size: 20px;
+    background-color: whitesmoke;
+}
+
+ul .nab3{
+   text-decoration: none;
+    list-style: none;
+    padding: 30px;
+    padding-right: 50px;
+    color: black;
+
+}
+
+ul .nab3:hover{
+box-shadow: 1px 5px 90px yellow;
+}
+
+
+.login{
+    position: absolute;
+    right: 20px;
+    top:4%;
+}
+
+nav .nab{
+    display: block;
+    display: flex;
+    color: white;
+    background-color: red;
+}
+
+
+nav li:hover{
+    background-color: black;
+    border-radius: 8px;
+}
+
+.Academy{
+    position: absolute;
+    right: 150px;
+}
+
+.login{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    
+}
+.log{
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    right:150px;
+    padding: 10px;
+    top:4%;
+}
+
+
+
+
+
+.Academy:hover{
+    background-color: black;
+    border-radius: 8px;
+}
+
+
+
+.login:hover{
+    background-color: black;
+    border-radius: 8px;
+}
+
+.log:hover{
+    background-color: black;
+    border-radius: 8px;
+}
+
+.dropDownProfile{
+    position: absolute;
+    top:4.5rem;
+    right: 1.5rem;
+    width:80px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: white;
+    border:1px solid gray;
+}
+
+.dropDownProfile::before{
+    content: '';
+    position: absolute;
+    top:-1.2rem;
+    right: 1rem;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: white;
+}

@@ -1,0 +1,20 @@
+.input-group {
+    margin-bottom: 15px; /* Adds space between each input */
+    display: flex;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px; /* Space between label and input */
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .inpt{
+    position: absolute;
+    left: 6%;
+  }
+  

@@ -1,0 +1,142 @@
+nav li{
+    list-style-type: none;
+    background-color: red;  
+    color: white;  
+    padding: 10px;
+    margin-right: 50px;
+       
+}
+
+.login{
+    position: absolute;
+    right: 20px;
+}
+
+nav .head{
+    display: block;
+    display: flex;
+}
+
+
+nav li:hover{
+    background-color: black;
+    border-radius: 8px;
+}
+
+.Academy{
+    position: absolute;
+    right: 150px;
+}
+
+
+
+.Academy:hover{
+    background-color: black;
+    border-radius: 8px;
+}
+
+
+
+.login:hover{
+    background-color: black;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.total{
+    display: flex;
+    justify-content:space-around;
+    border: 2px solid black;
+    width: 100%;
+    height: 800px;
+}
+
+.a{
+    border: 2px solid black;
+    padding: 5%;
+}
+.b{
+    border: 2px solid black;
+    padding: 5%;
+}
+.d{
+    border: 2px solid black;
+    padding: 5%;
+}
+.head{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+/* .z{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right:20px ;
+    border-radius: 5px;
+}
+.z:hover{
+    background-color: red;
+} */
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    top:30px;
+}
+
+footer ul {
+    list-style-type: none;
+   
+}
+
+footer li {
+    list-style-type: none;
+}
+
+footer li a {
+    text-decoration: none;
+    color: white; 
+}
+
+

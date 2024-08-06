@@ -1,0 +1,46 @@
+.questionimport{
+    position: relative;
+    left:40px;
+    padding: 2%;
+    
+    
+}
+
+.questionimport2{
+    position: absolute;
+    left:15%;
+}
+
+.first{
+    display: flex;
+    margin: 15px;
+}
+
+.second{
+    position: absolute;
+    left:30%;
+    
+}
+
+.second4{
+    position: absolute;
+    left:120px;
+}
+.questionimport5{
+    margin: 15px;
+
+}
+
+.questionimport7{
+    width: 60%;
+    position: absolute;
+    left:120px;
+    height: 35px;
+    position: relative;
+    bottom: 5px;
+}
+
+
+
+
+

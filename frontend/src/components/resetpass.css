@@ -1,0 +1,18 @@
+
+.ooo{
+    position: relative;
+    left:30%;
+    height: 400px;
+
+}
+
+.oop{
+    position: absolute;
+    left:7%;
+    width: 15%;
+    padding: 5px;
+    font-size: 16px; 
+   
+
+    
+}

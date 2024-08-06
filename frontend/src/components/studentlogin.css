@@ -1,0 +1,46 @@
+
+
+#studentlogin{
+    font-weight: 200px;
+    height: 250px;
+    background-color: white;
+    min-height: 100vh;
+    overflow-x: hidden; 
+}
+
+
+
+.mcq{
+    height: 500px;
+    width: 700px;
+    position: relative;
+    left: 5%;
+
+}
+
+.studentlogin2{
+    height: 450px;
+    position: relative;
+    left: 15%;
+    top:90px;
+    
+}
+.combine{
+    display: flex;
+}
+
+.notregister:hover{
+    color: red;
+}
+.sub{
+    color: white;
+    background-color: blue;
+    padding: 5px;
+    position: relative;
+    left: 90px;
+    
+}
+
+.sub:hover{
+    background-color: red;
+}

@@ -1,0 +1,83 @@
+.universityreg{
+    display: flex;
+}
+.universityreg2{
+    height: 600px;
+    position: relative;
+    left: 5%;
+}
+.val{
+    position: absolute;
+    left:30%;
+}
+
+
+.subbtn{
+    color: white;
+    background-color: blue;
+    padding: 5px;
+    position: relative;
+    left: 50%;
+    
+}
+
+
+.subbtn:hover{
+    background-color: red;
+}
+
+table td{
+    padding: 9px;
+}
+.val2{
+    position: absolute;
+    left:100%;
+}
+
+.section{
+    display: flex;
+}
+.value{
+    position: absolute;
+    left:55%;
+}
+#studentlogin{
+    font-weight: 200px;
+    height: 250px;
+    background-color: white;
+}
+
+.mcq{
+    height: 1000px;
+    width: 1200px;
+    position: relative;
+    left: 5%;
+
+}
+
+.studentlogin2{
+    height: 450px;
+    position: relative;
+    left: 15%;
+    top:90px;
+    
+}
+.combine{
+    display: flex;
+}
+
+.notregister:hover{
+    color: red;
+}
+.sub{
+    color: white;
+    background-color: blue;
+    padding: 5px;
+    position: relative;
+    left: 90px;
+    
+}
+
+.sub:hover{
+    background-color: red;
+}
