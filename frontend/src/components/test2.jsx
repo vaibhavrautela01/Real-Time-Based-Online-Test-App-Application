@@ -88,7 +88,7 @@ function Test() {
     } else if (section === "Section C") {
       return <R />;
     } else {
-      return "";
+      return <P />;
     }
   };
 

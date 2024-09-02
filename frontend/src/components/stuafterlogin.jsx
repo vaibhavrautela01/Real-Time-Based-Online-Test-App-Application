@@ -25,6 +25,15 @@ function Afterlogin() {
     }
   };
 
+  const handleNavigation2 = () => {
+    navigate('/');
+  };
+
+  const handleNavigation3 = () => {
+    navigate('/Result');
+  };
+
+
   return (
     <div>
       <Header />
@@ -51,18 +60,22 @@ function Afterlogin() {
 
 
               
-              <div className='afterloginbtn2'>
+              <div className='afterloginbtn2'
+              onClick={handleNavigation2}>
                 <h1>🖊️</h1>
                 <div id='Result'>
-                  LOCATIONS
+                  PERFORMANCE
                   <p>35 Lessons</p>
                 </div>
               </div>
-              <div className='afterloginbtn3'>
+
+
+              <div className='afterloginbtn3'
+              onClick={handleNavigation3}>
                 <h1>📑</h1>
                 <div id='Result'>
-                  POST QUESTIONS
-                  <p>MCQ</p>
+                RESULT
+                <p>MCQ</p>
                 </div>
               </div>
             </div>

@@ -3,66 +3,44 @@ import './section.css';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
-
 function SectionB() {
- 
   const navigate = useNavigate();
-
-
+  const { handleSubmit } = useForm();
 
   const [selectedId, setSelectedId] = useState(null);
-
-
-
-
   const [colors, setColors] = useState(() => {
     const savedColors = localStorage.getItem('colors');
     return savedColors ? JSON.parse(savedColors) : {};
   });
 
   const [questions, setQuestions] = useState([]);
-
-
-
   const [selectedOptions, setSelectedOptions] = useState(() => {
     const savedOptions = localStorage.getItem('selectedOptions');
     return savedOptions ? JSON.parse(savedOptions) : {};
   });
 
-  
   const [correctCount, setCorrectCount] = useState(() => {
     const savedCount = localStorage.getItem('correctCount');
     return savedCount ? JSON.parse(savedCount) : 0;
   });
-
-
 
   const [wrongCount, setWrongCount] = useState(() => {
     const savedCount = localStorage.getItem('wrongCount');
     return savedCount ? JSON.parse(savedCount) : 0;
   });
 
-
-
-
   const [answeredQuestions, setAnsweredQuestions] = useState(() => {
     const savedAnswered = localStorage.getItem('answeredQuestions');
     return savedAnswered ? JSON.parse(savedAnswered) : {};
   });
 
-
-
-
-  
   const [count, setCount] = useState(() => {
     const savedCount = localStorage.getItem('count');
     return savedCount !== null ? Number(savedCount) : 600;
   });
 
-
   useEffect(() => {
     localStorage.setItem('count', count);
-
     if (count > 0) {
       const timer = setTimeout(() => {
         setCount(count - 1);
@@ -75,18 +53,12 @@ function SectionB() {
     }
   }, [count, navigate]);
 
-
-
-
   useEffect(() => {
     fetch('/SectionA.json')
       .then(response => response.json())
       .then(data => setQuestions(data))
       .catch(error => console.error('Error:', error));
   }, []);
-
-
-
 
   useEffect(() => {
     localStorage.setItem('correctCount', JSON.stringify(correctCount));
@@ -96,18 +68,12 @@ function SectionB() {
     localStorage.setItem('answeredQuestions', JSON.stringify(answeredQuestions));
   }, [correctCount, colors, selectedOptions, answeredQuestions, wrongCount]);
 
-
-
-
   const handleOptionChange = (questionId, optionValue) => {
     setSelectedOptions(prev => ({
       ...prev,
       [questionId]: optionValue
     }));
   };
-
-
-
 
   const onSubmit = async (data) => {
     try {
@@ -125,7 +91,7 @@ function SectionB() {
     }
   };
 
-  const handleSubmit = (id) => {
+  const handleSubmitQuestion = (id) => {
     const question = questions.find(q => q.id === id);
     const isCorrect = selectedOptions[id] === question.answer;
 
@@ -140,8 +106,7 @@ function SectionB() {
 
       setAnsweredQuestions(prev => ({ ...prev, [id]: true }));
 
-      const totalAttempt = correctCount + wrongCount + 1;  
-
+      const totalAttempt = correctCount + wrongCount + 1;
 
       onSubmit({
         questionId: id,
@@ -196,16 +161,16 @@ function SectionB() {
             <br />
           </div>
         ))}
-        <button onClick={() => handleSubmit(question.id)} className="btn">Submit</button>
+        <button onClick={() => handleSubmitQuestion(question.id)} className="btn">Submit</button>
       </div>
     );
   };
 
   return (
     <>
-        <h1 style={{ color: "white", borderRadius: "5px", backgroundColor: "red", padding: "9px", float: "right" }}>
-          {count} sec
-        </h1>
+      <h1 style={{ color: "white", borderRadius: "5px", backgroundColor: "red", padding: "9px", float: "right" }}>
+        {count} sec
+      </h1>
       <center><h1>CLASS TEST - Section A</h1></center>
       <div style={{ border: "10px solid black" }}>
         {questions.map(question => (
@@ -228,4 +193,4 @@ function SectionB() {
   );
 }
 
-export default SectionB
+export default SectionB;

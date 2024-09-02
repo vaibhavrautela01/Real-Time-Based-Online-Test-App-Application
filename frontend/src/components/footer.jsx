@@ -8,7 +8,7 @@ import Account from '../assets/icons8-link-50.png'
 function footer() {
   return (
     <div>
-      <footer>
+      <footer >
       <div class="fsection">
       <ul>
                 <img src={Call}/>                

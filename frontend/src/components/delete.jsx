@@ -1,3 +1,5 @@
+// src/components/Delete.js
+
 import React, { useEffect, useState } from 'react';
 import './delete.css';
 import { useForm } from 'react-hook-form';
@@ -7,17 +9,6 @@ import User from '../assets/user.png';
 function Delete() {
   const { register, handleSubmit } = useForm();
   const [questionData, setQuestionData] = useState([]);
-  const [editingId, setEditingId] = useState(null);
-  const [formData, setFormData] = useState({
-    subject: '',
-    subcode: '',
-    question: '',
-    option1: '',
-    option2: '',
-    option3: '',
-    option4: ''
-  });
-
   const [universityData, setUniversityData] = useState([]);
   const [drop, setDrop] = useState(false);
 
@@ -25,14 +16,14 @@ function Delete() {
     fetch('/question.json')
       .then(response => response.json())
       .then(data => setQuestionData(data))
-      .catch(error => console.error('Error fetching the university data:', error));
+      .catch(error => console.error('Error fetching the question data:', error));
   }, []);
 
   useEffect(() => {
     fetch('/University.json')
       .then(response => response.json())
       .then(data => setUniversityData(data))
-      .catch(error => console.error('Error fetching the student data:', error));
+      .catch(error => console.error('Error fetching the university data:', error));
   }, []);
 
   const toggleDropdown = () => {
@@ -60,41 +51,6 @@ function Delete() {
     }
   };
 
-  const handleEdit = (id) => {
-    setEditingId(id);
-    const item = questionData.find(item => item.id === id);
-    setFormData(item);
-  };
-
-  const handleSave = async (id) => {
-    try {
-      const response = await fetch(`http://localhost:3001/edit`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) {
-        const errorResponse = await response.json();
-        throw new Error(errorResponse.message || 'Edit failed');
-      }
-
-      setQuestionData(questionData.map(item => (item.id === id ? formData : item)));
-      setEditingId(null);
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   const onSubmit = async (data) => {
     try {
       const response = await fetch('http://localhost:3001/deleteall', {
@@ -109,8 +65,10 @@ function Delete() {
         const errorResponse = await response.json();
         throw new Error(errorResponse.message || 'Delete all failed');
       }
+
+      setQuestionData([]);
     } catch (error) {
-      console.error('error', error);
+      console.error('Error:', error);
     }
   };
 
@@ -159,60 +117,39 @@ function Delete() {
             <div key={item.id} style={{ display: 'flex', margin: "5px" }}>
               <input
                 className='subject'
-                name='subject'
-                value={editingId === item.id ? formData.subject : item.subject}
-                onChange={handleChange}
-                readOnly={editingId !== item.id}
+                value={item.subject}
+                readOnly  style={{ width: '100%' }}
               />
               <input
                 className='subcode'
-                name='subcode'
-                value={editingId === item.id ? formData.subcode : item.subcode}
-                onChange={handleChange}
-                readOnly={editingId !== item.id}
+                value={item.subcode}
+                readOnly style={{ width: '100%' }}
               />
               <input
                 className='question'
-                name='question'
-                value={editingId === item.id ? formData.question : item.question}
-                onChange={handleChange}
-                readOnly={editingId !== item.id}
+                value={item.question}
+                readOnly style={{ width: '100%' }}
               />
               <input
                 className='option1'
-                name='option1'
-                value={editingId === item.id ? formData.option1 : item.option1}
-                onChange={handleChange}
-                readOnly={editingId !== item.id}
+                value={item.option1}
+                readOnly style={{ width: '100%' }}
               />
               <input
                 className='option2'
-                name='option2'
-                value={editingId === item.id ? formData.option2 : item.option2}
-                onChange={handleChange}
-                readOnly={editingId !== item.id}
+                value={item.option2}
+                readOnly style={{ width: '100%' }}
               />
               <input
                 className='option3'
-                name='option3'
-                value={editingId === item.id ? formData.option3 : item.option3}
-                onChange={handleChange}
-                readOnly={editingId !== item.id}
+                value={item.option3}
+                readOnly style={{ width: '100%' }}
               />
               <input
                 className='option4'
-                name='option4'
-                value={editingId === item.id ? formData.option4 : item.option4}
-                onChange={handleChange}
-                readOnly={editingId !== item.id}
+                value={item.option4}
+                readOnly style={{ width: '100%' }}
               />
-
-              {editingId === item.id ? (
-                <input type='button' value='SAVE' onClick={() => handleSave(item.id)} className='sbmt' />
-              ) : (
-                <input type='button' value='Edit' onClick={() => handleEdit(item.id)} className='edit' />
-              )}
-
               <input
                 type='button'
                 className='delete'
@@ -223,7 +160,7 @@ function Delete() {
           ))}
         </div>
       ) : (
-        <p></p>
+        <p>No data available</p>
       )}
 
       <div className='deleteall-container'>
@@ -234,7 +171,7 @@ function Delete() {
               <input type='text' defaultValue={questionData[0].uniID} {...register('t2')} hidden />
             </div>
           ) : (
-            <p></p>
+            <p>No data available</p>
           )}
           <input type='submit' value='DELETE ALL' className='deleteall' />
         </form>

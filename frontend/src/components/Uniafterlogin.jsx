@@ -47,6 +47,32 @@ function Afterlogin() {
     navigate('/Queform');
   };
 
+  const handleNavigation4 = () => {
+    navigate('/Allstudent');
+  };
+
+  const handleNavigation5 = () => {
+    navigate('/Activate');
+  };
+
+  const handleNavigation6 = () => {
+    navigate('/Edit');
+  };
+
+  const handleNavigation9 = () => {
+    navigate('/Notes');
+  };
+
+  const handleNavigation7 = () => {
+    navigate('/Recharge');
+  };
+
+  const handleNavigation8 = () => {
+    navigate('/Universitydashboard');
+  };
+
+  
+
   return (
     <div>
       <Header />
@@ -55,6 +81,9 @@ function Afterlogin() {
           <div className='university-card'>
             <center>
               <h1>Welcome to {universityData[0].institute} Panel</h1>
+              <h3> ID:{universityData[0].instituteID} </h3>
+
+
             </center>
             <h3 style={{ textAlign: 'right' }}>Established year : {universityData[0].year}</h3>
             <center>
@@ -62,8 +91,11 @@ function Afterlogin() {
             </center>
           
             <div className='afterlogin'>
+
+
+
               <div className='afterloginbtn' onClick={handleNavigation3}>
-                <h1>📚</h1>
+                <h1>🖊️</h1>
                 <div id='Result'>
                   POST QUESTIONS
                   <p>MCQ</p>
@@ -72,8 +104,57 @@ function Afterlogin() {
 
 
 
+              <div className='afterloginbtn2' onClick={handleNavigation6}>
+                <h1>📚</h1>
+                <div id='Result'>
+                EDIT QUESTIONS
+                <p>MCQ</p>
+                </div>
+              </div>
+
+
+
+              <div className='afterloginbtn3' onClick={handleNavigation2}>
+                <h1>🚮</h1>
+                <div id='Result'>
+                  DELETE QUESTIONS
+                  <p>MCQ</p>
+                </div>
+              </div>
+
+
+
+
+            </div>
+
+
+
+
+            <div className='afterlogin'>
+
+
+
+              <div className='afterloginbtn2' onClick={handleNavigation4}>
+                <h1>👨‍🎓</h1>
+                <div id='Result'>
+                  REGISTERED
+                  <p>STUDENT</p>
+                </div>
+              </div>
+              
+
+
+
+              <div className='afterloginbtn' onClick={handleNavigation5}>
+                <h1>👨‍🎓/🔐</h1>
+                <div id='Result'>
+                  ACTIVE / DEACTIVE
+                  <p>ACCOUNT</p>
+                </div>
+              </div>
+
               <div className='afterloginbtn2' onClick={handleNavigation1}>
-                <h1>🖊️</h1>
+                <h1>📚</h1>
                 <div id='Result'>
                   PENDING
                   <p>REQUEST</p>
@@ -81,15 +162,54 @@ function Afterlogin() {
               </div>
 
 
-
-              <div className='afterloginbtn3' onClick={handleNavigation2}>
-                <h1>📑</h1>
-                <div id='Result'>
-                  DELETE QUESTIONS
-                  <p>MCQ</p>
-                </div>
               </div>
-            </div>
+
+
+
+
+
+
+
+              <div className='afterlogin'>
+
+
+
+<div className='afterloginbtn' onClick={handleNavigation7} >
+  <h1>💲</h1>
+  <div id='Result'>
+    RECHARGE
+    <p>PLANS</p>
+  </div>
+</div>
+
+
+
+<div className='afterloginbtn2' onClick={handleNavigation8}>
+  <h1>🎒</h1>
+  <div id='Result'>
+  DASHBOARD
+  <p>TEACHER</p>
+  </div>
+</div>
+
+
+
+<div className='afterloginbtn3' onClick={handleNavigation9}>
+  <h1>🧑‍🏫</h1>
+  <div id='Result'>
+    ADD NOTES
+    <p> VIDEO LECTURE</p>
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+
           </div>
         ) : (
           <p>Loading...</p>

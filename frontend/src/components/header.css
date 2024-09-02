@@ -44,6 +44,16 @@ box-shadow: 1px 5px 90px yellow;
     top:4%;
 }
 
+#logi{
+    background-color: red;
+    color:white;
+    position: absolute;
+    right: 16%;
+    top:5%;
+    text-decoration: none;
+
+}
+
 nav .nab{
     display: block;
     display: flex;

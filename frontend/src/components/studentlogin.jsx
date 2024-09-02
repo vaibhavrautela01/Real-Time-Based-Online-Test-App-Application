@@ -31,10 +31,9 @@ const StudentLogin = () => {
       }
       
       navigate('/Afterlogin');
-    } 
-    catch (error) {
-      console.error('error',error);
-      
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Login failed: ' + error.message);
     }
   };
 
@@ -43,28 +42,22 @@ const StudentLogin = () => {
       <Header />
       <div className="combine">
         <img src={Mcq} alt="MCQ" className="mcq-image" />
-
         <div className="studentlogin2">
-          
           <h1>Student Login</h1>
-
           <form onSubmit={handleSubmit(onSubmit)}>
-            
-            Enter the Username:
-              <input type="text" className="input" {...register('t1')}/><br/><br/>
+            <label>Enter the Username:</label>
+            <input type="text" className="input" {...register('t1')} /><br /><br />
 
-           Enter the Password:
-              <input type="password" className="input" {...register('t2')}/><br/><br/>
-
+            <label>Enter the Password:</label>
+            <input type="password" className="input" {...register('t2')} /><br /><br />
 
             <Link to="/Student" className="notregistered">
               Not Registered?
-            </Link><br/><br/>
+            </Link><br /><br />
 
-    
-              <button type="submit" className="sub" disabled={isSubmitting}>
-                {isSubmitting ? 'Submitting...' : 'Submit'}
-              </button>
+            <button type="submit" style={{ position: 'relative', left: '150px' }} className="sub" disabled={isSubmitting}>
+              Submit
+            </button>
           </form>
         </div>
       </div>

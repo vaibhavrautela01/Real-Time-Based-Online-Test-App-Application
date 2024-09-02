@@ -1,3 +1,4 @@
+   
 .sbmt{
     color: white;
     background-color: blue;
@@ -38,38 +39,81 @@
 
 
 
+.name{
+    width: 8%;
+}
 
 .subject{
     width: 10%;
     padding: 1%;
 }
-.subcode{
+.dob{
+    width: 8%;
+    padding: 1%;
+}
+.Highschool{
     width: 10%;
+    position: relative;
+    left:20px;
+}
+
+
+.gender{
+    width: 5%;
+    padding: 1%;
+}
+.gender2{
+    width: 5%;
+position: relative;
+left:15px;
+}
+.collage{
+    width: 13%;
     padding: 1%;
 
 }
-.question{
-    width: 25%;
+
+
+.phone{
+    width: 10%;
+    position: relative;
+    left:-10px;}
+
+.nationality{
+    width: 3%;
     padding: 1%;
 
 }
-.option1{
-    width: 10%;
-    padding: 1%;
-
+.nationality2{
+    width: 3%;
+    position: relative;
+    left:-5px;
 }
-.option2{
-    width: 10%;
+.email{
+    width: 15%;
     padding: 1%;
-
 }
-.option3{
-    width: 10%;
+
+.email2{
+    width: 15%;
+    position: relative;
+    left:-35px;
+}
+
+.plan{
+    width: 3%;
     padding: 1%;
-
 }
-.option4{
-    width: 10%;
+
+.plan2{
+    width: 3%;
+    position: relative;
+    left:-35px;
+}
+
+
+.address{
+    width: 35%;
     padding: 1%;
 }
 
@@ -92,44 +136,4 @@
 
 .deleteall:hover{
 background-color: rgb(162, 24, 24);    
-}
-
-
-
-
-
-
-
-.subject2{
-    width: 10%;
-}
-.subcode2{
-    width: 10%;
-}
-.question2{
-    width: 25%;
-
-}
-.option12{
-    width: 10%;
-    position: relative;
-    left: 30px;
-
-}
-.option22{
-    width: 10%;
-    position: relative;
-    left: 40px;
-
-}
-.option32{
-    width: 10%;
-    position: relative;
-    left: 70px;
-
-}
-.option42{
-    width: 10%;
-    position: absolute;
-    left: -130px;
 }

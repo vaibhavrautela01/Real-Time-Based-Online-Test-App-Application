@@ -67,8 +67,8 @@ const Instreg = () => {
 
             {tasks.map((task, index) => (
               <li key={index}>
-                <input type='text' value={task.plan} {...register('t12')} readOnly /><br/>
-                date: <input type='text' value={task.plandate} {...register('t13')} readOnly />
+                <input type='text' value={task.plan} {...register('t12')} hidden readOnly /><br/>
+                <input type='text' value={task.plandate} {...register('t13')} hidden readOnly />
               </li>
             ))}
 

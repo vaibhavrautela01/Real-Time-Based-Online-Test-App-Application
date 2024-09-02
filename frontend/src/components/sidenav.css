@@ -1,0 +1,20 @@
+.sidebar {
+    color: white;
+    background-color: red;
+    padding: 20px; 
+    position: relative;
+    top:-10px;
+    height: 650px;
+}
+
+
+.sidebar3 {
+    color: white;
+    text-decoration: none;
+    padding: 20px 70px; 
+    display: block; 
+}
+
+.sidebar3:hover {
+background-color: blue;
+}

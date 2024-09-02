@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from './header_log3';
 import Footer from './footer';
 import { useForm } from 'react-hook-form';
+import Sidenav from './sidenav';
 
 function Gold() {
   const [studentData, setStudentData] = useState([]);
@@ -14,11 +15,12 @@ function Gold() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ t1: data.studentID, t2: data.requestStatus }),
+        body: JSON.stringify({ t1: data.studentID }), // Send only studentID
       });
       if (response.ok) {
-        alert('Status updated successfully');
         reset();
+        // Optionally, refetch the data to reflect updates
+        fetchStudentData();
       } else {
         console.error('Failed to update status');
       }
@@ -27,15 +29,22 @@ function Gold() {
     }
   };
 
-  useEffect(() => {
-    fetch('/stuplan.json')
+  const fetchStudentData = () => {
+    fetch('/Stuplan.json')
       .then(response => response.json())
       .then(data => setStudentData(data))
+      .catch(error => console.error('Error fetching student data:', error));
+  };
+
+  useEffect(() => {
+    fetchStudentData();
   }, []);
 
   return (
     <div>
       <Header />
+      <div className='Sidenav'>
+      <Sidenav/>
       {studentData.length > 0 ? (
         studentData.map((student, index) => (
           <div key={student.studentID} className='student-card'>
@@ -47,8 +56,8 @@ function Gold() {
                       <h1>{student.firstname} {student.lastname}</h1>
                       <p>Student ID: {student.studentID}</p>
                       <p>Email: {student.email}</p>
-                      </td>
-                      <td>
+                    </td>
+                    <td>
                       <p>Phone: {student.phone}</p>
                       <p>DOB: {student.dob}</p>
                       <p>Gender: {student.gender}</p>
@@ -63,7 +72,7 @@ function Gold() {
                         <option value="Success">Success</option>
                       </select><br/><br/>
                       <input type='text' defaultValue={student.studentID} {...register('studentID')} hidden />
-                      <input type='submit' />
+                      <input type='submit' value="Update" style={{backgroundColor:"blue",color:"white",paddingLeft:"25px",paddingRight:"25px",padding:"10px"}}  />
                     </td>
                   </tr>
                 </tbody>
@@ -72,8 +81,9 @@ function Gold() {
           </div>
         ))
       ) : (
-        <p>Loading student data...</p>
+        <p>No Pending Request, Empty student data...</p>
       )}
+      </div>
       <Footer />
     </div>
   );

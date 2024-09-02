@@ -8,7 +8,7 @@ body, html {
     display: flex;
     justify-content:space-around;
     width: 100%;
-    height: 800px;
+    height: 950px;
 }
 
 #searchbtn{

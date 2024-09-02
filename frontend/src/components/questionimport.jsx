@@ -3,6 +3,7 @@ import Header from './header_log3';
 import Footer from '../components/footer';
 import './questionimport.css';
 import { useForm } from "react-hook-form";
+import Sidenav from './sidenav';
 
 
 function Questionimport () {
@@ -46,6 +47,8 @@ let x = Math.floor((Math.random() * 10000) + 1);
   return (
     <>    
     <Header/>
+<div className='Sidenav'>
+    <Sidenav/>
     <div className='questionimport'>
     <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -53,32 +56,29 @@ let x = Math.floor((Math.random() * 10000) + 1);
 
   <div className='first'> First Name:<input type='text' placeholder='enter your name' className='questionimport2' {...register('t1')}></input>
 
-  <div className='second'>Last Name:<input type='text' className='second4' placeholder='enter your last name' {...register('t2')}></input><br/></div></div>
+  <div className='second'>Last<input type='text' className='second4' placeholder='enter your last name' {...register('t2')}></input><br/></div></div>
 
   <div className='first'> Company/ University/ School:<input type='text' placeholder='enter company name' className='questionimport2' {...register('t3')}></input>
   
-  <div className='second'>  Subject:<input type='text' className='second4' placeholder='Subject' {...register('t4')}></input><br/><br/></div></div>
+  <div className='second'>  Subject:<input type='text' className='second4' placeholder='Subject' {...register('t4')}></input><br/></div></div>
 
 
-
-
-
-  <label for="Select Paper" className='first'>Select Paper: </label>
+   <div className='first'>Select Paper: 
   <select name="Select Paper" className='questionimport2' {...register('t5')}>
     <option>Select Paper Code</option>
     <option value="PCS-101">PCS-101</option>
     <option value="PCS-102">PCS-102</option>
     <option value="PCS-103">PCS-103</option>
-  </select><br/><br/>
+  </select></div>
 
 
-  <label for="Select Section" className='first'>Select Section: </label>
+  <div className='first'>Select Section: 
   <select name="Select Section" className='questionimport2' {...register('t6')}>
     <option>Select Section</option>
     <option value="Section A">Section A</option>
     <option value="Section B">Section B</option>
     <option value="Section C">Section C</option>
-  </select><br/><br/>
+  </select><br/><br/></div>
 
 
 
@@ -96,7 +96,7 @@ let x = Math.floor((Math.random() * 10000) + 1);
    {universityData.length > 0 ? (
     <div>
 
-      <input type='text' defaultValue={universityData[0].instituteID} {...register('t13')}/>
+      <input type='text' defaultValue={universityData[0].instituteID} {...register('t13')} hidden/>
 
     </div>
 
@@ -107,6 +107,7 @@ let x = Math.floor((Math.random() * 10000) + 1);
 
   <input type='submit' className='btn' ></input>
   </form>
+  </div>
   </div>
 <Footer/>
     </>

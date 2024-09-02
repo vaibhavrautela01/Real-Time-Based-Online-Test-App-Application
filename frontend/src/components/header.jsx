@@ -19,8 +19,9 @@ function header() {
                                 <Link to="/Stulogin" className='login'>Student Login</Link>
                                 <Link to="/Unilogin" className='log'>Academy Login</Link>
 
+                                <Link to="/Admin" id='logi'>Admin</Link>
+
   
-                                <Link to="/Stuplans">Stuplan</Link>
 
 
 
